@@ -1,0 +1,25 @@
+<p>retry, retrywhen, scan, delay</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <table *ngIf="userdata != null">
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>email</th>
+                </tr>
+                <tr *ngFor="let data of userdata">
+                    <td>{{data.id}}</td>
+                    <td>{{data.name}}</td>
+                    <td>{{data.email}}</td>
+                </tr>
+            </table>
+            <button class="btn btn-primary" type="button" (click)="fatchingData()">
+                <span *ngIf="fatching" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                {{fatching ? 'fatching...' : 'fatch data'}}
+            </button>
+        </div>
+    </div>
+</div>
+<h2 *ngIf="errMesaagae">Error:something is wrong plese try again</h2>

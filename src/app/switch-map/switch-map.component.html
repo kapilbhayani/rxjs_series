@@ -1,0 +1,13 @@
+<form #searchform="ngForm">
+    <!-- <input type="text" ngModel name="search"> ' -->
+    <input type="text" #test>
+    <div>
+        <tr *ngFor="let data of searchResult">
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.username}}</td>
+            <td>{{data.website}}</td>
+            <td>{{data.phone}}</td>
+        </tr>
+    </div>
+</form>
