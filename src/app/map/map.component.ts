@@ -9,7 +9,7 @@ import { delay, from, interval, map, of, Subscription } from 'rxjs';
 })
 export class MapComponent implements OnInit {
   private userData: any
-
+// map operater example
   constructor(private http: HttpClient) {
     // debugger
     this.http.get('https://jsonplaceholder.typicode.com/users').pipe(
